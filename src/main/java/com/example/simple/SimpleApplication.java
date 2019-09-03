@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
 
-@SpringBootApplication(scanBasePackages = {"com"})
+@SpringBootApplication(scanBasePackages = {"com.example"})
 @MapperScan("com.example.dy.user.mapper")
 @Controller
 //@EnableRedisHttpSession
@@ -35,7 +35,7 @@ public class SimpleApplication extends SpringBootServletInitializer {
 		return "hello";
 	}
 
-	@GetMapping("session")
+	@GetMapping("/session")
 	public String getSession(HttpServletRequest httpServletRequest){
 		return httpServletRequest.getSession().getId();
 	}
