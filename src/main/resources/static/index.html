@@ -2,40 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>主页</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/index/index.css">
 </head>
 <body>
-Hello,World
-<div id="sey-hello">
-    <a v-bind:href="url">hello</a>
-    <div v-on:click="sayHello">seyHello</div>
-</div>
-<div id="example-1">
-    <button v-on:click="counter += 1">Add 1</button>
-    <p>The button above has been clicked {{ counter }} times.</p>
-</div>
+    <div class="container-fluid">
+        <!--<img src="img/bg.jpg" class="img-fluid" alt="Responsive image"/>
+        <img src="img/bg.jpg" class="img-thumbnail"/>-->
+        <!--<h1>Hello World</h1>-->
+
+    </div>
 </body>
-<script src="js/jquery/jquery-3.4.1.js"></script>
-<script src="js/vue/vue.js"></script>
-<script>
-    $(function () {
-        var va = new Vue({
-            el: '#sey-hello',
-            data:{
-              url:"hello"
-            },
-            methods:{
-                sayHello:function () {
-                    alert("Hello World");
-                }
-            }
-        });
-        var example1 = new Vue({
-            el: '#example-1',
-            data: {
-                counter: 0
-            }
-        })
-    })
-</script>
+
 </html>

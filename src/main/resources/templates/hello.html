@@ -6,5 +6,36 @@
 </head>
 <body>
  ${name}
+ <div id="sey-hello">
+     <a v-bind:href="url">hello</a>
+     <div v-on:click="sayHello">seyHello</div>
+ </div>
+ <div id="example-1">
+     <button v-on:click="counter += 1">Add 1</button>
+     <p>The button above has been clicked {{ counter }} times.</p>
+ </div>
+ <script src="js/jquery/jquery-3.4.1.js"></script>
+ <script src="js/vue/vue.js"></script>
+ <script>
+     $(function () {
+         var va = new Vue({
+             el: '#sey-hello',
+             data:{
+                 url:"hello"
+             },
+             methods:{
+                 sayHello:function () {
+                     alert("Hello World");
+                 }
+             }
+         });
+         var example1 = new Vue({
+             el: '#example-1',
+             data: {
+                 counter: 0
+             }
+         })
+     })
+ </script>
 </body>
 </html>
